@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <style>
+      /* Library */
+      html {
+        overflow-y: scroll;
+      }
+      html.scroll-lock-body-is-active > body {
+        overflow: hidden;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: fixed;
+      }
+      body {
+        margin: 0;
+        overflow-y: auto;
+      }
+    </style>
+    <style>
+      /* Demo */
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 16px;
+      }
+      body {
+        font-family: Calibri, 'Trebuchet MS', sans-serif;
+      }
+      p {
+        background: rgba(255, 255, 255, 0.5);
+        padding: 1rem;
+      }
+      .app {
+        min-height: 300vh;
+        background: linear-gradient(dodgerblue, deeppink);
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .intro {
+        background: white;
+        display: inline-block;
+        padding: 1rem;
+      }
+      .toggle {
+        z-index: 1;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        background: white;
+        padding: 1rem;
+        color: black;
+      }
+      .modal {
+        z-index: 1;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        display: grid;
+        place-items: center;
+      }
+      .modal-content {
+        position: relative;
+        width: 300px;
+        max-height: 300px;
+        background: white;
+        padding: 1rem;
+        overflow-y: auto;
+        pointer-events: initial;
+      }
+      .text {
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <button class="toggle" id="toggle">toggle</button>
+
+      <div class="modal" id="modal">
+        <div class="modal-content" id="modal-content">
+          <p class="text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum<br /><br />
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum<br /><br />
+          </p>
+        </div>
+      </div>
+
+      <p>scroll lock body - remember position</p>
+      <p>scroll lock body - remember position</p>
+      <p>scroll lock body - remember position</p>
+      <p>scroll lock body - remember position</p>
+      <p>scroll lock body - remember position</p>
+    </div>
+
+    <script src="/dist/index.umd.min.js"></script>
+    <script>
+      let isModalVisible = false;
+      let byId = (id) => document.getElementById(id);
+
+      if (!isModalVisible) {
+        byId('modal').style.display = 'none';
+      }
+
+      byId('toggle').addEventListener('click', (event) => {
+        isModalVisible = !isModalVisible;
+        byId('modal').style.display = isModalVisible ? '' : 'none';
+        if (isModalVisible) window.scrollLockBody.enable();
+        else window.scrollLockBody.disable();
+      });
+    </script>
+  </body>
+</html>
