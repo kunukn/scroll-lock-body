@@ -15,7 +15,6 @@ html.scroll-lock-body-is-active > body {
   position: fixed;
 }
 body {
-  margin: 0;
   overflow-y: auto;
 }
 */

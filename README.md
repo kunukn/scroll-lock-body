@@ -5,7 +5,7 @@
 [![Library minified size](https://badgen.net/bundlephobia/min/scroll-lock-body)](https://bundlephobia.com/result?p=scroll-lock-body)
 [![Library minified + gzipped size](https://badgen.net/bundlephobia/minzip/scroll-lock-body)](https://bundlephobia.com/result?p=scroll-lock-body)
 
-# CSS required
+## CSS required
 
 :warning: ️You need to add style (transition) in your own stylesheet to add animation. Here is an example.
 
@@ -27,6 +27,10 @@
   }
 </style>
 ```
+
+## Demo
+
+- https://codepen.io/kunukn/pen/yLgZovx
 
 ## Installation
 
