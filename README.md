@@ -51,7 +51,7 @@ This module has an UMD bundle available through JSDelivr and Unpkg CDNs.
 <script src="https://cdn.jsdelivr.net/npm/scroll-lock-body"></script>
 
 <script>
-  // UMD module is exposed through the "[libraryCamelCaseName]" global variable.
+  // UMD module is exposed through the "scrollLockBody" global variable.
   console.log(scrollLockBody);
 </script>
 ```
