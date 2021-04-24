@@ -1,5 +1,5 @@
 /*!
- * scroll-lock-body v0.0.1
+ * scroll-lock-body v0.0.2
  * (c) kunukn
  * Released under the MIT License.
  */
@@ -26,7 +26,6 @@
     position: fixed;
   }
   body {
-    margin: 0;
     overflow-y: auto;
   }
   */

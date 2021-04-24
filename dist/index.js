@@ -1,5 +1,5 @@
 /*!
- * scroll-lock-body v0.0.1
+ * scroll-lock-body v0.0.2
  * (c) kunukn
  * Released under the MIT License.
  */
@@ -24,7 +24,6 @@ html.scroll-lock-body-is-active > body {
   position: fixed;
 }
 body {
-  margin: 0;
   overflow-y: auto;
 }
 */
