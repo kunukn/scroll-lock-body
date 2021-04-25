@@ -33,17 +33,6 @@ Minimal JS library which supports scroll lock on the body which remembers the sc
 </style>
 ```
 
-:warning: ️avoid having direct children in body which has position sticky.
-e.g.
-
-```html
-<style>
-  body > .some-element {
-    position: sticky; /* use position fixed or absolute instead */
-  }
-</style>
-```
-
 ## Demo
 
 - https://codepen.io/kunukn/pen/yLgZovx
@@ -57,6 +46,16 @@ npm install scroll-lock-body --save
 
 # For Yarn, use the command below.
 yarn add scroll-lock-body
+```
+
+### Usage
+
+```js
+import {
+  enableScrollLock,
+  disableScrollLock,
+  isScrollLockEnabled,
+} from 'scroll-lock-body';
 ```
 
 ### Installation from CDN
@@ -79,6 +78,17 @@ This module has an UMD bundle available through JSDelivr and Unpkg CDNs.
 ## Documentation
 
 [Documentation generated from source files by Typedoc](./docs/README.md).
+
+:warning: ️avoid having direct children in body which has position sticky.
+e.g.
+
+```html
+<style>
+  body > .some-element {
+    position: sticky; /* use position fixed or absolute instead */
+  }
+</style>
+```
 
 ## License
 
