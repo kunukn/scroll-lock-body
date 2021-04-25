@@ -19,6 +19,9 @@ var disable = function () {
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
 };
+var isEnabled = function () {
+    return !!document.documentElement.getAttribute(attribute);
+};
 
-export { disable, enable };
+export { disable, enable, isEnabled };
 //# sourceMappingURL=index.esm.js.map

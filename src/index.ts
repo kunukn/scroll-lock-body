@@ -16,3 +16,7 @@ export const disable = (): void => {
     window.scrollTo(0, parseInt(scrollY || '0') * -1);
   }
 };
+
+export const isEnabled = (): boolean => {
+  return !!document.documentElement.getAttribute(attribute);
+};

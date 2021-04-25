@@ -8,6 +8,7 @@
 
 - [disable](README.md#disable)
 - [enable](README.md#enable)
+- [isEnabled](README.md#isenabled)
 
 ## Functions
 
@@ -17,7 +18,7 @@
 
 **Returns:** *void*
 
-Defined in: [index.ts:29](https://github.com/kunukn/scroll-lock-body/blob/500693d/src/index.ts#L29)
+Defined in: [index.ts:10](https://github.com/kunukn/scroll-lock-body/blob/63ae427/src/index.ts#L10)
 
 ___
 
@@ -27,4 +28,14 @@ ___
 
 **Returns:** *void*
 
-Defined in: [index.ts:22](https://github.com/kunukn/scroll-lock-body/blob/500693d/src/index.ts#L22)
+Defined in: [index.ts:3](https://github.com/kunukn/scroll-lock-body/blob/63ae427/src/index.ts#L3)
+
+___
+
+### isEnabled
+
+▸ `Const`**isEnabled**(): *boolean*
+
+**Returns:** *boolean*
+
+Defined in: [index.ts:20](https://github.com/kunukn/scroll-lock-body/blob/63ae427/src/index.ts#L20)

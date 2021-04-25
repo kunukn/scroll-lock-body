@@ -25,9 +25,13 @@
           window.scrollTo(0, parseInt(scrollY || '0') * -1);
       }
   };
+  var isEnabled = function () {
+      return !!document.documentElement.getAttribute(attribute);
+  };
 
   exports.disable = disable;
   exports.enable = enable;
+  exports.isEnabled = isEnabled;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
