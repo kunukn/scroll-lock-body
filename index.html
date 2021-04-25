@@ -61,6 +61,14 @@
         padding: 1rem;
         color: black;
       }
+      .toggle > span:first-child {
+        min-width: 65px;
+        display: inline-block;
+      }
+      .toggle > span:nth-child(2) {
+        min-width: 70px;
+        display: inline-block;
+      }
       .modal {
         z-index: 1;
         position: fixed;
@@ -142,13 +150,15 @@
       <p>scroll lock body - remember position</p>
       <p>scroll lock body - remember position</p>
 
-      <button class="toggle" id="toggle">toggle</button>
+      <button class="toggle" id="toggle"><span>toggle</span></button>
     </div>
 
     <script src="/dist/index.umd.min.js"></script>
     <script>
       let isModalVisible = false;
       let byId = (id) => document.getElementById(id);
+
+      let toggleButton = byId('toggle');
 
       let enable = () => {
         isModalVisible = true;
@@ -160,8 +170,17 @@
       };
       let uiUpdate = () => {
         byId('modal').style.display = isModalVisible ? '' : 'none';
-        if (isModalVisible) window.scrollLockBody.enable();
-        else window.scrollLockBody.disable();
+        if (isModalVisible) {
+          window.scrollLockBody.enable();
+          toggleButton.innerHTML = `<span>Toggle</span> <span>${
+            window.scrollLockBody.isEnabled() ? 'enabled' : 'disabled'
+          }</span>`;
+        } else {
+          window.scrollLockBody.disable();
+          toggleButton.innerHTML = `<span>Toggle</span> <span>${
+            window.scrollLockBody.isEnabled() ? 'enabled' : 'disabled'
+          }</span>`;
+        }
       };
 
       [].slice.call(document.querySelectorAll('.btn-close')).forEach((b) => {
@@ -172,7 +191,7 @@
         byId('modal').style.display = 'none';
       }
 
-      byId('toggle').addEventListener('click', (event) => {
+      toggleButton.addEventListener('click', (event) => {
         isModalVisible = !isModalVisible;
         uiUpdate();
       });

@@ -9,22 +9,23 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var attribute = 'scroll-lock-is-active';
+var html = document.documentElement;
 var enable = function () {
     if (window.scrollY) {
         document.body.style.marginTop = "-" + window.scrollY + "px";
     }
-    document.documentElement.setAttribute(attribute, '');
+    html.setAttribute(attribute, '');
 };
 var disable = function () {
     var scrollY = document.body.style.marginTop;
     document.body.style.marginTop = '';
-    document.documentElement.removeAttribute(attribute);
+    html.removeAttribute(attribute);
     if (scrollY) {
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
 };
 var isEnabled = function () {
-    return !!document.documentElement.getAttribute(attribute);
+    return html.getAttribute(attribute) != null;
 };
 
 exports.disable = disable;
