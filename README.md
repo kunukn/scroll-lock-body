@@ -35,11 +35,13 @@ Minimal JS library which supports scroll lock on the body which remembers the sc
 
 ## Demo
 
-- https://codepen.io/kunukn/pen/yLgZovx // codepen edit
+- https://nol5t.csb.app/ // codesandbox view
 
 - https://codesandbox.io/s/scroll-lock-body-demo-nol5t // codesandbox edit
 
-- https://nol5t.csb.app/ // codesandbox view
+- https://codepen.io/kunukn/full/yLgZovx // codepen view
+
+- https://codepen.io/kunukn/pen/yLgZovx // codepen edit
 
 ## Installation
 
