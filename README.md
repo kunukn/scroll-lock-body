@@ -1,6 +1,5 @@
 # scroll-lock-body
 
-[![Build Status](https://travis-ci.org/kunukn/scroll-lock-body.svg?branch=master)](https://travis-ci.org/kunukn/scroll-lock-body)
 [![License](https://badgen.net/github/license/kunukn/scroll-lock-body)](./LICENSE)
 [![Library minified size](https://badgen.net/bundlephobia/min/scroll-lock-body)](https://bundlephobia.com/result?p=scroll-lock-body)
 [![Library minified + gzipped size](https://badgen.net/bundlephobia/minzip/scroll-lock-body)](https://bundlephobia.com/result?p=scroll-lock-body)
