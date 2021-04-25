@@ -2,6 +2,7 @@
 
 import { terser } from 'rollup-plugin-terser';
 import typescript2 from 'rollup-plugin-typescript2';
+import copy from 'rollup-plugin-copy';
 
 import pkg from './package.json';
 
@@ -67,6 +68,9 @@ const options = {
       clean: true,
       useTsconfigDeclarationDir: true,
       tsconfig: './tsconfig.bundle.json',
+    }),
+    copy({
+      targets: [{ src: 'src/index.css', dest: 'dist/' }],
     }),
   ],
 };

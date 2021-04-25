@@ -6,24 +6,8 @@
     <title>Demo</title>
 
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <style>
-      /* Library */
-      html {
-        overflow-y: scroll;
-      }
-      html[scroll-lock-is-active] > body {
-        overflow: hidden;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        position: fixed;
-      }
-      body {
-        margin: 0;
-        overflow-y: auto; /* overflow-y: scroll -> shows double scroll */
-      }
-    </style>
+    <link rel="stylesheet" href="/dist/index.css" />
+
     <style>
       /* Demo */
       * {
@@ -47,15 +31,27 @@
         flex-direction: column;
         justify-content: space-between;
       }
-      .toggle {
+      .toggle-wrapper {
         z-index: 5;
         position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        pointer-events: none;
+      }
+      .toggle {
+        pointer-events: initial;
+        position: absolute;
         top: 1rem;
-        right: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
         background: white;
         padding: 1rem;
         color: black;
         border-radius: 4px;
+        width: 100%;
+        max-width: 300px;
+        display: block;
       }
       .toggle > span:first-child {
         min-width: 65px;
@@ -73,12 +69,17 @@
         top: 0;
         left: 0;
         pointer-events: none;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .modal.is-loading {
         display: none;
-        place-items: center;
       }
       .modal-content {
         position: relative;
-        width: 300px;
+        top: 6rem;
+        max-width: 300px;
         max-height: 300px;
         background: white;
         padding: 1rem;
@@ -98,7 +99,7 @@
       @supports (backdrop-filter: blur(1px)) {
         .modal-overlay {
           background-color: rgba(0, 0, 0, 0.2);
-          backdrop-filter: saturate(180%) blur(4px);
+          backdrop-filter: saturate(180%) blur(3px);
         }
       }
       .text {
@@ -109,13 +110,22 @@
         padding: 1rem;
         border-radius: 4px;
       }
+      .-elevation {
+        box-shadow: 0px 24px 18px rgba(23, 43, 77, 0.04),
+          0px 35px 24px rgba(23, 43, 77, 0.08);
+      }
+      .-elevation-10 {
+        box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),
+          0px 10px 14px 1px rgba(0, 0, 0, 0.14),
+          0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+      }
     </style>
   </head>
   <body>
     <div class="app">
-      <div class="modal" id="modal">
+      <div class="modal is-loading" id="modal">
         <div class="modal-overlay"></div>
-        <div class="modal-content" id="modal-content">
+        <div class="modal-content -elevation-10" id="modal-content">
           <button class="btn-close">close</button>
           <p class="text">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -147,7 +157,11 @@
       <p>scroll lock body - remember position</p>
       <p>scroll lock body - remember position</p>
 
-      <button class="toggle" id="toggle"><span>toggle</span></button>
+      <div class="toggle-wrapper">
+        <button class="toggle -elevation-10" id="toggle">
+          <span>toggle</span>
+        </button>
+      </div>
     </div>
 
     <script src="/dist/index.umd.min.js"></script>
@@ -156,6 +170,7 @@
       let byId = (id) => document.getElementById(id);
 
       let toggleButton = byId('toggle');
+      let modal = byId('modal');
 
       let onEnable = () => {
         isModalVisible = true;
@@ -166,7 +181,7 @@
         uiUpdate();
       };
       let uiUpdate = () => {
-        byId('modal').style.display = isModalVisible ? 'grid' : 'none';
+        modal.style.display = isModalVisible ? '' : 'none';
 
         if (isModalVisible) {
           window.scrollLockBody.enableScrollLock();
@@ -185,14 +200,16 @@
         b.addEventListener('click', onDisable);
       });
 
-      if (isModalVisible) {
-        onEnable();
+      if (!isModalVisible) {
+        onDisable();
       }
 
       toggleButton.addEventListener('click', (event) => {
         isModalVisible = !isModalVisible;
         uiUpdate();
       });
+
+      modal.classList.remove('is-loading');
     </script>
   </body>
 </html>
