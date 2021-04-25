@@ -5,6 +5,10 @@
 [![Library minified size](https://badgen.net/bundlephobia/min/scroll-lock-body)](https://bundlephobia.com/result?p=scroll-lock-body)
 [![Library minified + gzipped size](https://badgen.net/bundlephobia/minzip/scroll-lock-body)](https://bundlephobia.com/result?p=scroll-lock-body)
 
+## About
+
+Minimal JS library which supports scroll lock on the body which remembers the scroll position.
+
 ## CSS required
 
 :warning: ️You need to add style (transition) in your own stylesheet to add animation. Here is an example.
