@@ -84,6 +84,10 @@ This module has an UMD bundle available through JSDelivr and Unpkg CDNs.
 </script>
 ```
 
+## Explore the dist files
+
+https://unpkg.com/scroll-lock-body/
+
 ## Documentation
 
 [Documentation generated from source files by Typedoc](./docs/README.md).
