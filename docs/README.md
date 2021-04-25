@@ -17,7 +17,7 @@
 
 **Returns:** *void*
 
-Defined in: index.ts:30
+Defined in: [index.ts:29](https://github.com/kunukn/scroll-lock-body/blob/500693d/src/index.ts#L29)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 **Returns:** *void*
 
-Defined in: index.ts:23
+Defined in: [index.ts:22](https://github.com/kunukn/scroll-lock-body/blob/500693d/src/index.ts#L22)

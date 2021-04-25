@@ -14,7 +14,7 @@
   html {
     overflow-y: scroll;
   }
-  html.scroll-lock-body-is-active > body {
+  html[scroll-lock-is-active] > body {
     overflow: hidden;
     left: 0;
     right: 0;
@@ -23,6 +23,7 @@
     position: fixed;
   }
   body {
+    margin: 0;
     overflow-y: auto; /* overflow-y: scroll -> shows double scroll */
   }
 </style>
