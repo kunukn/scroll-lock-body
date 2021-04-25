@@ -47,11 +47,6 @@
         flex-direction: column;
         justify-content: space-between;
       }
-      .intro {
-        background: white;
-        display: inline-block;
-        padding: 1rem;
-      }
       .toggle {
         z-index: 5;
         position: fixed;
@@ -60,6 +55,7 @@
         background: white;
         padding: 1rem;
         color: black;
+        border-radius: 4px;
       }
       .toggle > span:first-child {
         min-width: 65px;
@@ -77,7 +73,7 @@
         top: 0;
         left: 0;
         pointer-events: none;
-        display: grid;
+        display: none;
         place-items: center;
       }
       .modal-content {
@@ -89,6 +85,7 @@
         overflow-y: auto;
         pointer-events: initial;
         z-index: 3;
+        border-radius: 4px;
       }
       .modal-overlay {
         position: fixed;
@@ -169,7 +166,8 @@
         uiUpdate();
       };
       let uiUpdate = () => {
-        byId('modal').style.display = isModalVisible ? '' : 'none';
+        byId('modal').style.display = isModalVisible ? 'grid' : 'none';
+
         if (isModalVisible) {
           window.scrollLockBody.enable();
           toggleButton.innerHTML = `<span>Toggle</span> <span>${
@@ -187,8 +185,8 @@
         b.addEventListener('click', disable);
       });
 
-      if (!isModalVisible) {
-        byId('modal').style.display = 'none';
+      if (isModalVisible) {
+        enable();
       }
 
       toggleButton.addEventListener('click', (event) => {
