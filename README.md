@@ -43,6 +43,10 @@ Minimal JS library which supports scroll lock on the body which remembers the sc
 
 - https://codepen.io/kunukn/pen/yLgZovx // codepen edit
 
+- https://2esfs.csb.app // Vue view
+
+- https://codesandbox.io/s/vue-scroll-lock-body-demo-2esfs // Vue edit
+
 ## Installation
 
 This library is published in the NPM registry and can be installed using any compatible package manager.

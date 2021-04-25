@@ -73,10 +73,11 @@
         justify-content: center;
         align-items: flex-start;
       }
-      .modal.is-loading {
-        display: none;
+      .modal.is-ready .modal-content {
+        transition: transform 300ms;
       }
       .modal-content {
+        transform: scale(0);
         position: relative;
         top: 6rem;
         max-width: 300px;
@@ -97,9 +98,11 @@
         background-color: rgba(0, 0, 0, 0.3);
       }
       @supports (backdrop-filter: blur(1px)) {
-        .modal-overlay {
-          background-color: rgba(0, 0, 0, 0.2);
-          backdrop-filter: saturate(180%) blur(3px);
+        @media (max-width: 1366px) and (max-height: 1366px) {
+          .modal-overlay {
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: saturate(180%) blur(3px);
+          }
         }
       }
       .text {
@@ -110,20 +113,29 @@
         padding: 1rem;
         border-radius: 4px;
       }
-      .-elevation {
-        box-shadow: 0px 24px 18px rgba(23, 43, 77, 0.04),
-          0px 35px 24px rgba(23, 43, 77, 0.08);
-      }
+
       .-elevation-10 {
         box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),
           0px 10px 14px 1px rgba(0, 0, 0, 0.14),
           0px 4px 18px 3px rgba(0, 0, 0, 0.12);
       }
+
+      html[scroll-lock-is-active] .modal-content {
+        transform: scale(1);
+      }
+
+      html[scroll-lock-is-active] .modal-overlay {
+        display: block;
+      }
+
+      html[scroll-lock-is-active] button {
+        visibility: visible;
+      }
     </style>
   </head>
   <body>
     <div class="app">
-      <div class="modal is-loading" id="modal">
+      <div class="modal" id="modal">
         <div class="modal-overlay"></div>
         <div class="modal-content -elevation-10" id="modal-content">
           <button class="btn-close">close</button>
@@ -209,7 +221,7 @@
         uiUpdate();
       });
 
-      modal.classList.remove('is-loading');
+      modal.classList.add('is-ready');
     </script>
   </body>
 </html>
