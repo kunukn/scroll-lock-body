@@ -29,6 +29,17 @@
 </style>
 ```
 
+:warning: ️avoid having direct children in body which has position sticky.
+e.g.
+
+```html
+<style>
+  body > .some-element {
+    position: sticky; /* use position fixed or absolute instead */
+  }
+</style>
+```
+
 ## Demo
 
 - https://codepen.io/kunukn/pen/yLgZovx

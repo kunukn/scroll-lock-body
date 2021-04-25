@@ -18,7 +18,7 @@
 
 **Returns:** *void*
 
-Defined in: [index.ts:10](https://github.com/kunukn/scroll-lock-body/blob/63ae427/src/index.ts#L10)
+Defined in: [index.ts:11](https://github.com/kunukn/scroll-lock-body/blob/ebac3ff/src/index.ts#L11)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 **Returns:** *void*
 
-Defined in: [index.ts:3](https://github.com/kunukn/scroll-lock-body/blob/63ae427/src/index.ts#L3)
+Defined in: [index.ts:4](https://github.com/kunukn/scroll-lock-body/blob/ebac3ff/src/index.ts#L4)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 **Returns:** *boolean*
 
-Defined in: [index.ts:20](https://github.com/kunukn/scroll-lock-body/blob/63ae427/src/index.ts#L20)
+Defined in: [index.ts:21](https://github.com/kunukn/scroll-lock-body/blob/ebac3ff/src/index.ts#L21)
