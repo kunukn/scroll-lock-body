@@ -1,14 +1,14 @@
 const attribute = 'scroll-lock-is-active';
 const html = document.documentElement;
 
-export const enable = (): void => {
+export const enableScrollLock = (): void => {
   if (window.scrollY) {
     document.body.style.marginTop = `-${window.scrollY}px`;
   }
   html.setAttribute(attribute, '');
 };
 
-export const disable = (): void => {
+export const disableScrollLock = (): void => {
   const scrollY = document.body.style.marginTop;
   document.body.style.marginTop = '';
   html.removeAttribute(attribute);
@@ -18,6 +18,6 @@ export const disable = (): void => {
   }
 };
 
-export const isEnabled = (): boolean => {
+export const isScrollLockEnabled = (): boolean => {
   return html.getAttribute(attribute) != null;
 };

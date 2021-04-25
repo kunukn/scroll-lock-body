@@ -1,5 +1,5 @@
 /*!
- * scroll-lock-body v0.0.3
+ * scroll-lock-body v0.0.4
  * (c) kunukn
  * Released under the MIT License.
  */
@@ -10,13 +10,13 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var attribute = 'scroll-lock-is-active';
 var html = document.documentElement;
-var enable = function () {
+var enableScrollLock = function () {
     if (window.scrollY) {
         document.body.style.marginTop = "-" + window.scrollY + "px";
     }
     html.setAttribute(attribute, '');
 };
-var disable = function () {
+var disableScrollLock = function () {
     var scrollY = document.body.style.marginTop;
     document.body.style.marginTop = '';
     html.removeAttribute(attribute);
@@ -24,11 +24,11 @@ var disable = function () {
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
 };
-var isEnabled = function () {
+var isScrollLockEnabled = function () {
     return html.getAttribute(attribute) != null;
 };
 
-exports.disable = disable;
-exports.enable = enable;
-exports.isEnabled = isEnabled;
+exports.disableScrollLock = disableScrollLock;
+exports.enableScrollLock = enableScrollLock;
+exports.isScrollLockEnabled = isScrollLockEnabled;
 //# sourceMappingURL=index.js.map

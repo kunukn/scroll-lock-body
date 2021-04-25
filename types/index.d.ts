@@ -1,4 +1,4 @@
-export declare const enable: () => void;
-export declare const disable: () => void;
-export declare const isEnabled: () => boolean;
+export declare const enableScrollLock: () => void;
+export declare const disableScrollLock: () => void;
+export declare const isScrollLockEnabled: () => boolean;
 //# sourceMappingURL=index.d.ts.map

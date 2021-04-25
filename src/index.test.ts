@@ -1,13 +1,13 @@
-import { enable, disable, isEnabled } from './';
+import { enableScrollLock, disableScrollLock, isScrollLockEnabled } from './';
 
 describe('bodyScrollLock', () => {
   test('enable is a function', () => {
-    expect(typeof enable).toBe('function');
+    expect(typeof enableScrollLock).toBe('function');
   });
   test('disable is a function', () => {
-    expect(typeof disable).toBe('function');
+    expect(typeof disableScrollLock).toBe('function');
   });
   test('isEnabled is a function', () => {
-    expect(typeof isEnabled).toBe('function');
+    expect(typeof isScrollLockEnabled).toBe('function');
   });
 });

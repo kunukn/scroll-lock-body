@@ -6,36 +6,36 @@
 
 ### Functions
 
-- [disable](README.md#disable)
-- [enable](README.md#enable)
-- [isEnabled](README.md#isenabled)
+- [disableScrollLock](README.md#disablescrolllock)
+- [enableScrollLock](README.md#enablescrolllock)
+- [isScrollLockEnabled](README.md#isscrolllockenabled)
 
 ## Functions
 
-### disable
+### disableScrollLock
 
-▸ `Const`**disable**(): *void*
-
-**Returns:** *void*
-
-Defined in: [index.ts:11](https://github.com/kunukn/scroll-lock-body/blob/a4c15a4/src/index.ts#L11)
-
-___
-
-### enable
-
-▸ `Const`**enable**(): *void*
+▸ `Const`**disableScrollLock**(): *void*
 
 **Returns:** *void*
 
-Defined in: [index.ts:4](https://github.com/kunukn/scroll-lock-body/blob/a4c15a4/src/index.ts#L4)
+Defined in: [index.ts:11](https://github.com/kunukn/scroll-lock-body/blob/c3d4e96/src/index.ts#L11)
 
 ___
 
-### isEnabled
+### enableScrollLock
 
-▸ `Const`**isEnabled**(): *boolean*
+▸ `Const`**enableScrollLock**(): *void*
+
+**Returns:** *void*
+
+Defined in: [index.ts:4](https://github.com/kunukn/scroll-lock-body/blob/c3d4e96/src/index.ts#L4)
+
+___
+
+### isScrollLockEnabled
+
+▸ `Const`**isScrollLockEnabled**(): *boolean*
 
 **Returns:** *boolean*
 
-Defined in: [index.ts:21](https://github.com/kunukn/scroll-lock-body/blob/a4c15a4/src/index.ts#L21)
+Defined in: [index.ts:21](https://github.com/kunukn/scroll-lock-body/blob/c3d4e96/src/index.ts#L21)

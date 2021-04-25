@@ -1,6 +1,6 @@
 {
   "name": "scroll-lock-body",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "scroll lock the body and remember the position",
   "cdn": "dist/index.umd.js",
   "main": "dist/index.js",

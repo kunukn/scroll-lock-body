@@ -157,11 +157,11 @@
 
       let toggleButton = byId('toggle');
 
-      let enable = () => {
+      let onEnable = () => {
         isModalVisible = true;
         uiUpdate();
       };
-      let disable = () => {
+      let onDisable = () => {
         isModalVisible = false;
         uiUpdate();
       };
@@ -169,24 +169,24 @@
         byId('modal').style.display = isModalVisible ? 'grid' : 'none';
 
         if (isModalVisible) {
-          window.scrollLockBody.enable();
+          window.scrollLockBody.enableScrollLock();
           toggleButton.innerHTML = `<span>Toggle</span> <span>${
-            window.scrollLockBody.isEnabled() ? 'enabled' : 'disabled'
+            window.scrollLockBody.isScrollLockEnabled() ? 'enabled' : 'disabled'
           }</span>`;
         } else {
-          window.scrollLockBody.disable();
+          window.scrollLockBody.disableScrollLock();
           toggleButton.innerHTML = `<span>Toggle</span> <span>${
-            window.scrollLockBody.isEnabled() ? 'enabled' : 'disabled'
+            window.scrollLockBody.isScrollLockEnabled() ? 'enabled' : 'disabled'
           }</span>`;
         }
       };
 
       [].slice.call(document.querySelectorAll('.btn-close')).forEach((b) => {
-        b.addEventListener('click', disable);
+        b.addEventListener('click', onDisable);
       });
 
       if (isModalVisible) {
-        enable();
+        onEnable();
       }
 
       toggleButton.addEventListener('click', (event) => {
