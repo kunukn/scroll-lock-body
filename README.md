@@ -34,17 +34,17 @@ Minimal JS library which supports scroll lock on the body which remembers the sc
 
 ## Demo
 
-- https://nol5t.csb.app/ // codesandbox view
+- <a href="https://nol5t.csb.app/" target="_blank" rel="noopener noreferrer">Codesandbox view</a>
 
-- https://codesandbox.io/s/scroll-lock-body-demo-nol5t // codesandbox edit
+- <a href="https://codesandbox.io/s/scroll-lock-body-demo-nol5t" target="_blank" rel="noopener noreferrer">Codesandbox edit</a>
 
-- https://codepen.io/kunukn/full/yLgZovx // codepen view
+- <a href="https://codepen.io/kunukn/full/yLgZovx" target="_blank" rel="noopener noreferrer">Codepen view</a>
 
-- https://codepen.io/kunukn/pen/yLgZovx // codepen edit
+- <a href="https://codepen.io/kunukn/pen/yLgZovx" target="_blank" rel="noopener noreferrer">Codepen edit</a>
 
-- https://2esfs.csb.app // Vue view
+- <a href="https://2esfs.csb.app" target="_blank" rel="noopener noreferrer">Vue view</a>
 
-- https://codesandbox.io/s/vue-scroll-lock-body-demo-2esfs // Vue edit
+- <a href="https://codesandbox.io/s/vue-scroll-lock-body-demo-2esfs" target="_blank" rel="noopener noreferrer">Vue edit</a>
 
 ## Installation
 
