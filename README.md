@@ -6,8 +6,13 @@
 
 ## About
 
-Minimal JS library which supports scroll lock on the body and remembers the scroll position.
+Minimal JS library which supports scroll lock on the body and remembers the scroll position.<br>
 This version uses margin-top approach to remember the scroll-position.
+
+## Alternate version with simpler implementation
+
+An alternate version with same API exists where there are no required CSS<br>
+https://github.com/kunukn/scroll-lock-body-2
 
 ## CSS required
 
