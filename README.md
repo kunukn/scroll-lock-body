@@ -71,6 +71,15 @@ import {
   disableScrollLock,
   isScrollLockEnabled,
 } from 'scroll-lock-body';
+
+// Run this to lock the body scroll
+enableScrollLock();
+
+// Run this to unlock the body scroll
+disableScrollLock();
+
+// Run this to get the lock state
+isScrollLockEnabled(); // returns trur or false
 ```
 
 ### Installation from CDN
