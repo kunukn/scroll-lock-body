@@ -1,10 +1,10 @@
 /*!
- * scroll-lock-body v0.0.7
+ * scroll-lock-body v0.0.8
  * (c) kunukn
  * Released under the MIT License.
  */
 
-var attribute = 'scroll-lock-is-active';
+var attribute = 'data-scroll-lock-is-active';
 var html = document.documentElement;
 var enableScrollLock = function () {
     if (window.scrollY) {
