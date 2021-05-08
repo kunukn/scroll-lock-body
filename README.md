@@ -23,7 +23,7 @@ https://github.com/kunukn/scroll-lock-body-2
   html {
     overflow-y: scroll;
   }
-  html[scroll-lock-is-active] > body {
+  html[data-scroll-lock-is-active] > body {
     overflow: hidden;
     left: 0;
     right: 0;
