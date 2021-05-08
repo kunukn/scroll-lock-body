@@ -48,7 +48,7 @@ https://github.com/kunukn/scroll-lock-body-2
 
 - <a href="https://codepen.io/kunukn/pen/yLgZovx" target="_blank" rel="noopener noreferrer">Codepen edit</a>
 
-- <a href="https://pr4ph.csb.app" target="_blank" rel="noopener noreferrer">Vue view</a>
+- <a href="https://2esfs.csb.app" target="_blank" rel="noopener noreferrer">Vue view</a>
 
 - <a href="https://codesandbox.io/s/vue-scroll-lock-body-demo-2esfs" target="_blank" rel="noopener noreferrer">Vue edit</a>
 
