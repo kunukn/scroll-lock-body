@@ -1,4 +1,4 @@
-const attribute = 'scroll-lock-is-active';
+const attribute = 'data-scroll-lock-is-active';
 const html = document.documentElement;
 
 export const enableScrollLock = (): void => {
