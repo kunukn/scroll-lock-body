@@ -79,7 +79,7 @@ enableScrollLock();
 disableScrollLock();
 
 // Run this to get the lock state
-isScrollLockEnabled(); // returns trur or false
+isScrollLockEnabled(); // returns true or false
 ```
 
 ### Installation from CDN
