@@ -1,5 +1,5 @@
 /*!
- * scroll-lock-body v0.0.9
+ * scroll-lock-body v0.0.10
  * (c) kunukn
  * Released under the MIT License.
  */
