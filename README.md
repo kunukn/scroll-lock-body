@@ -1,5 +1,7 @@
 # scroll-lock-body
 
+[![npm version](https://img.shields.io/npm/v/scroll-lock-body.svg?style=flat-square)](https://www.npmjs.com/package/scroll-lock-body)
+[![npm downloads](https://img.shields.io/npm/dm/scroll-lock-body.svg?style=flat-square)](https://www.npmjs.com/package/scroll-lock-body)
 [![License](https://badgen.net/github/license/kunukn/scroll-lock-body)](./LICENSE)
 [![Library minified size](https://badgen.net/bundlephobia/min/scroll-lock-body)](https://bundlephobia.com/result?p=scroll-lock-body)
 [![Library minified + gzipped size](https://badgen.net/bundlephobia/minzip/scroll-lock-body)](https://bundlephobia.com/result?p=scroll-lock-body)
