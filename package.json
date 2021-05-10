@@ -1,6 +1,6 @@
 {
   "name": "scroll-lock-body",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "scroll lock the body and remember the position",
   "cdn": "dist/index.umd.js",
   "main": "dist/index.js",
@@ -59,7 +59,8 @@
   },
   "keywords": [
     "typescript",
-    "boilerplate",
+    "scroll",
+    "lock",
     "library"
   ],
   "author": {
