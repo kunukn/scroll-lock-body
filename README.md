@@ -40,17 +40,27 @@ https://github.com/kunukn/scroll-lock-body-2
 
 ## Demo
 
-- <a href="https://codepen.io/kunukn/full/yLgZovx" target="_blank" rel="noopener noreferrer">Codepen view - VanillaJS</a>
+<table style="border-spacing: 16px;border-collapse: separate;">
 
-- <a href="https://codepen.io/kunukn/pen/yLgZovx" target="_blank" rel="noopener noreferrer">Codepen edit - VanillaJS</a>
+<tr>
+<td>Codepen VanillaJS</td>
+<td><a href="https://codepen.io/kunukn/full/yLgZovx" target="_blank" rel="noopener noreferrer">View</a></td>
+<td><a href="https://codepen.io/kunukn/pen/yLgZovx" target="_blank" rel="noopener noreferrer">Edit</a></td>
+</tr>
 
-- <a href="https://nol5t.csb.app/" target="_blank" rel="noopener noreferrer">Codesandbox view - VanillaJS</a>
+<tr>
+<td>Codesandbox VanillaJS</td>
+<td><a href="https://nol5t.csb.app/" target="_blank" rel="noopener noreferrer">View</a></td>
+<td><a href="https://codesandbox.io/s/scroll-lock-body-demo-nol5t" target="_blank" rel="noopener noreferrer">Edit</a></td>
+</tr>
 
-- <a href="https://codesandbox.io/s/scroll-lock-body-demo-nol5t" target="_blank" rel="noopener noreferrer">Codesandbox edit - VanillaJS</a>
+<tr>
+<td>Codesandbox VueJS</td>
+<td><a href="https://2esfs.csb.app" target="_blank" rel="noopener noreferrer">View</a></td>
+<td><a href="https://codesandbox.io/s/vue-scroll-lock-body-demo-2esfs" target="_blank" rel="noopener noreferrer">Edit</a></td>
+</tr>
 
-- <a href="https://2esfs.csb.app" target="_blank" rel="noopener noreferrer">Codesandbox view - VueJS</a>
-
-- <a href="https://codesandbox.io/s/vue-scroll-lock-body-demo-2esfs" target="_blank" rel="noopener noreferrer">Codesandbox edit - VueJS</a>
+</table>
 
 ## Installation
 
